@@ -1,0 +1,94 @@
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Exemplo</title>
+  <style>
+    :root {
+      --green: #040612;
+      --bg: #ffffff;
+      --muted: #6b7280;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg, #040612,#13247c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(10,10,10,0.06);
+      padding: 28px;
+      background: #ffffff;
+    }
+
+    h1 { margin: 0 0 6px; font-size: 20px; }
+    p.lead { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+
+    label { display: block; font-size: 13px; margin-bottom: 6px; }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e6e7eb;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .row { display: flex; gap: 8px; }
+
+    button {
+      background: var(--green);
+      color: #fff;
+      border: 0;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    .error { color: #d92d20; font-size: 13px; margin-top: 8px; display: none; }
+
+    @media (max-width:480px){ .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Entrar</h1>
+    <p class="lead">Entre com seu email e senha para acessar a área restrita.</p>
+
+    <form id="loginForm" onsubmit="return false;">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="seu@exemplo.com" required />
+      </div>
+
+      <div style="margin-top:12px;">
+        <label for="password">Senha</label>
+        <div class="row">
+          <input id="password" type="password" placeholder="mínimo 6 caracteres" required />
+          <button type="button" id="togglePwd" class="secondary">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="error" id="errorMsg"></div>
+
+      <div style="margin-top:18px;">
+        <button id="loginBtn">Entrar</button>
+      </div>
+    </form>
+  </div>
