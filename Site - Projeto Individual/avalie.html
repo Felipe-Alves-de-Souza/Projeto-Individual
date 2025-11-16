@@ -96,12 +96,25 @@ main {
     align-items: center;
 }
 
+.box {
+ 
+   color: #000000;
+ 
+   margin-top: 90px;
+   font-weight: bold;
+   margin-left: 200px ;
+    width: 45%;
+    height: 40%;
+    flex-direction: center;
+    justify-content: center;
+}  
+
 
 </style>
 <body>
 
     
-</body>
+
 <nav class="sidebar">
     <div>
 
@@ -121,6 +134,16 @@ main {
     <button onclick="window.location.href='index.html'" onclick="sair()">Sair</button>
 </nav>
 
+<div class="box">
+<h2>Você gostou de assistir o anime Demon Slayer - Kimetsu no Yaiba?</h2>
+<button >SIM</button> <button>NÃO</button><br><br><br><br>
+<form>
+  <label for="mensagem">Deixe um comentário:</label><br>
+  <textarea id="comentario" name="mensagem" rows="10" cols="50" placeholder="Escreva aqui..."></textarea><br>
+  <button>Enviar</button>
+</form>
+</div>
+</body>
 </html>
 
 
