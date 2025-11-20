@@ -96,6 +96,16 @@ main {
     align-items: center;
 }
 
+.grafico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-left: 300px;
+    margin-top: 32%;
+}
+
 
 </style>
 <body>
@@ -123,7 +133,7 @@ main {
 </nav>
 <div class="dashboards-container">
    <div style="max-width: 700px;">
-    <canvas id="myChart1"></canvas>
+    <div class="grafico"><canvas id="myChart1"></canvas></div>
     </div>
     </div>
 </html>
@@ -132,21 +142,18 @@ main {
 const ctx = document.getElementById('myChart1');
 
   new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Pessoas que gostaram', 'Pessoas que não gostaram'],
-      datasets: [{
-        label: 'Avaliação anime',
-        data: [22, 24],
-        borderWidth: 1
-      }, ]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
+      type: 'pie',
+      data: {
+        labels: ['Pessoas que gostaram', 'Pessoas que não gostaram'],
+        datasets: [{
+          label: 'Pessoas que gostaram',  
+          data: [16, 14],
+          backgroundColor: [
+            'blue',
+            'red'
+          ]
+        }]
       }
-    }
-  });
+    });
+    
 </script>

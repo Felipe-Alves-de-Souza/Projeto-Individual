@@ -18,12 +18,12 @@ function calcularHashira() {
     pontuacao = 0;
     perguntas.length = 0;
 
-    // acessando selects DIRECTAMENTE pelos IDs globais
+    
     perguntas.push(Number(p1.value));
     perguntas.push(Number(p2.value));
     perguntas.push(Number(p3.value));
 
-    // soma as respostas
+    
     for (let i = 0; i < perguntas.length; i++) {
         pontuacao += perguntas[i];
     }
