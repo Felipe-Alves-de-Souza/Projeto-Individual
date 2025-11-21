@@ -136,24 +136,74 @@ main {
     <div class="grafico"><canvas id="myChart1"></canvas></div>
     </div>
     </div>
+    <div class="dashboards-container">
+    <div style="max-width: 700px;">
+      <div class="grafico">
+    
+        <canvas id="graficoVotos" width="400" height="400"></canvas>
+      </div>
+      <p>Sim: <span id="contagem-sim">0</span></p>
+      <p>Não: <span id="contagem-nao">0</span></p>
+    </div>
+  </div>
 </html>
 <script src="../js/logado.js"></script>
 <script>
-const ctx = document.getElementById('myChart1');
-
-  new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Pessoas que gostaram', 'Pessoas que não gostaram'],
-        datasets: [{
-          label: 'Pessoas que gostaram',  
-          data: [16, 14],
-          backgroundColor: [
-            'blue',
-            'red'
-          ]
-        }]
+let graficoVotosChart;
+function iniciarGraficoVotos(votosSim, votosNao) {
+  const ctx = document.getElementById("graficoVotos").getContext("2d");
+  graficoVotosChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Sim', 'Não'],
+      datasets: [{
+        data: [votosSim, votosNao],
+        backgroundColor: [
+          'rgb(75, 192, 192)',
+          'rgb(255, 99, 132)'
+        ],
+        hoverOffset: 10
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
       }
+    }
+  });
+}
+
+
+function atualizarGraficoVotos() {
+  fetch("/dash/contar-votos")
+    .then(res => res.json())
+    .then(data => {
+      const votosSim = data.votos_sim;
+      const votosNao = data.votos_nao;
+
+      
+      document.getElementById("contagem-sim").innerText = votosSim;
+      document.getElementById("contagem-nao").innerText = votosNao;
+
+      if (graficoVotosChart) {
+        graficoVotosChart.data.datasets[0].data = [votosSim, votosNao];
+        graficoVotosChart.update();  
+      } else {
+        iniciarGraficoVotos(votosSim, votosNao);
+      }
+    })
+    .catch(err => {
+      console.error("Erro ao buscar votos:", err);
     });
-    
+}
+
+
+window.onload = function () {
+  atualizarGraficoVotos();
+
+  setInterval(atualizarGraficoVotos, 5000);
+};
 </script>

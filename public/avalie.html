@@ -136,14 +136,60 @@ main {
 
 <div class="box">
 <h2>Você gostou de assistir o anime Demon Slayer - Kimetsu no Yaiba?</h2>
-<button >SIM</button> <button>NÃO</button><br><br><br><br>
+<input type="radio"  name="nome_do_grupo" value="Sim" id="sim">
+<label for="id1">Sim</label>
+<input type="radio"  name="nome_do_grupo" value="Não" id="nao">
+<label for="id2">Não</label><br><br><br><br>
 <form>
   <label for="mensagem">Deixe um comentário:</label><br>
-  <textarea id="comentario" name="mensagem" rows="10" cols="50" placeholder="Escreva aqui..."></textarea><br>
-  <button>Enviar</button>
-</form>
+  <textarea id="comentario" name="mensagem" rows="10" cols="50" placeholder="Escreva aqui..."></textarea><br></form>
+  <button type="button" onclick="publicar()">Enviar</button>
+
 </div>
 </body>
 </html>
+<script>
+  function publicar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+    if (!idUsuario) {
+      alert("Usuário não identificado");
+      return;
+    }
 
+    var descricao = document.getElementById("comentario").value;
 
+ 
+    var respostaSelecionada = document.querySelector('input[name="nome_do_grupo"]:checked');
+    console.log("respostaSelecionada:", respostaSelecionada);
+console.log("respostaSelecionada.value (antes de converter):", respostaSelecionada ? respostaSelecionada.value : null);
+    if (!respostaSelecionada) {
+      alert("Escolha Sim ou Não!");
+      return;
+    }
+
+    var resposta = (respostaSelecionada.value === "Sim") ? 1 : 0;
+
+    console.log("ID usuario:", idUsuario);
+    console.log("Comentário:", descricao);
+    console.log("Resposta (Sim=1 / Não=0):", resposta);
+
+    fetch(`/dash/publicar/${idUsuario}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        gostou_anime: resposta,
+        comentario: descricao
+      })
+    })
+    .then(res => res.text())
+    .then(txt => {
+
+      document.getElementById("comentario").value = "";
+      respostaSelecionada.checked = false;
+    })
+    .catch(err => console.error("ERRO no fetch:", err));
+  }
+
+  
+  window.publicar = publicar;
+</script>
