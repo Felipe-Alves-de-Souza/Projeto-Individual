@@ -1,307 +1,367 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Institucional</title>
-    <script src="./js/sessao.js"></script>
-
-    <style>
-        body {
-  background-color: #02061b
-}
-header {
-    justify-content: right;
-}
-.corpo {
-    text-align: left;
-    margin-left: 150px;
-    top: 20px;
-    position: relative;
-    margin-top: -70px;
-}
-.slidebar {
-    display: flex;
-   justify-content: space-between;
-   margin-top: -40px;
-   margin-left: 600px;
-   margin-right: 500px;
-}
-.botao {
-    display: flex;
-    gap: 60px;
-    justify-content: right;
-    margin: 15px;
-    margin-top: -12px;
-    color: #FFFFFF;
-    border-radius: 15px;
-}
-.btn-entre {
-  background-color: #e0e0e0;
-  color: #02061b;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-}
-.intro {
-    margin-top: -20px;
-   margin-left: 150px;
-  
-}
-.textoini {
-    color: #FFFFFF;
-    background-color: #040612;
-    border-radius: 10px;
-    width: 800px;
-    height: 800px;
-    margin-left: 150px;
-    margin-top: 70px;
-    padding: 15px;
-}
-.texintr {
-    font-size: 20px;
-}
-.subtop {
-    padding: 20px;
-}
-.back1{
-    background-color: #020319;
-    border-radius: 10px;
-    width: 250px;
-    height: 200px;
-    padding: 15px;
-    margin-left: 25px;
-}
-.back2 {
-    background-color: #020319;
-    border-radius: 10px;
-    margin-left: 400px;
-    width: 250px;
-    height: 200px;
-    margin-top: -230px;
-    padding: 15px;
-}
-.back3 {
-     background-color: #020319;
-     border-radius: 10px;
-      width: 250px;
-    height: 200px;
-    padding: 15px;
-    margin-top: 40px;
-    margin-left: 25px;
-}
-.back4 {
-    background-color: #020319;
-    border-radius: 10px;
-    margin-left: 400px;
-    width: 250px;
-    height: 200px;
-    padding: 15px;
-    margin-top: -230px;
-}
-.textvi {
-    color: #FFFFFF;
-    background-color: #040612;
-    border-radius: 10px;
-    width: 700px;
-    height: 800px;
-    margin-left: 1100px;
-    margin-top: -830px;
-    padding: 15px;
-}
-.subtop2 {
-    padding: 20px;
-    text-align: center;
-}
-.video {
-    margin-left: 45px;
-}
-.texvideo {
-    padding: 20px;
-    font-size: 24px;
-}
-.sobre {
-    color: #FFFFFF;
-    background-color: #040612;
-    border-radius: 10px;
-    width: 1650px;
-    height: 900px;
-    margin-left: 150px;
-    margin-top: 70px;
-    padding: 15px;
-}
-.subtop3 {
-    padding: 20px;
-}
-.textsobre {
-  padding: 30px;
-  font-size: 24px;
-}
-.objetivo {
-    color: #FFFFFF;
-    background-color: #040612;
-    border-radius: 10px;
-    width: 1650px;
-    height: 500px;
-    margin-left: 150px;
-    margin-top: 70px;
-    padding: 15px;
-}
-.subtop4 {
-     padding: 20px;
-}
-.texobjetivo {
-    font-size: 24px;
-    padding: 30px;
-}
-
-.botao-principal {
-            background-color: #e0e0e0;
-            color: #02061b; 
-            font-family: 'Merriweather', 'Georgia', serif; 
-            font-weight: 700;
-            font-size: 24px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-}
-.botaoob-container {
-            text-align: center;
-            padding: 30px;
-        }
-        .comente {
-            color: #FFFFFF;
-            margin-left: 300px;
-
-        }
-        .mensagem {
-             display: block;
-     margin-left: 400px;
-    
-    font-size: 20px;
-    width: 500px;
-    height: 300px;
-    background-color: #e0e0e0;
-    color: #000; 
-    border: 2px solid #05040e; 
-    border-radius: 15px; 
-    padding: 20px;
-    font-family: 'Georgia', serif;
-        }
-          
-        .imgcomente {
-            width: 580px;
-            height: 340px;
-        }
-        .imgcomente img {
-            border-radius: 15px; 
-            border: 3px solid #FF0000; 
-            display: block;
-            margin-top: -340px;
-            margin-left: 1100px;
-        }
-        .vint {
-           text-align: center;
-           margin-top: -80px;
-           color: #FFFFFF;
-           font-size: 20px;
-           font-family: 'Georgia', serif;
-        }
-
-
-
-
-
-    </style>
+    <title>Demon Slayer - Fan Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #141414;
+        color: white;
+    }
+
+
+    header {
+        background-color: #0a0a0a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .botao button {
+        margin-top: 8px;
+        padding: 8px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+    .botao button:hover {
+        background-color: #d92020;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .logo1 {
+        display: flex;
+        height: 60px;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    nav a {
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+
+    }
+
+    nav a:hover {
+        color: #ff3131;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 120px 20px;
+        background-image: url('img/capa.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        text-shadow: 3px 3px 5px #000;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+
+    .hero button:hover {
+        background-color: #d92020;
+    }
+
+
+    .sobre {
+        padding: 50px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .galeria {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        width: 220px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #000;
+    }
+
+    .card img {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        margin-top: 10px;
+    }
+
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        background-color: #0a0a0a;
+    }
+
+    .motivacao {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #1b1b1b;
+        margin-top: 40px;
+    }
+
+    .motivacao h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        color: #ff3131;
+    }
+
+    .mot-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .mot-texto {
+        width: 350px;
+        background-color: #242424;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 0 10px black;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: left;
+    }
+
+    .mot-foto,
+    .mot-ods {
+        width: 150px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .mot-foto img,
+    .mot-ods img {
+        width: 150px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+
+    .legenda {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #ccc;
+    }
+
+    .ultimo {
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .objetivo {
+        padding: 50px 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .obj-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .obj-texto {
+         width: 500px;
+        background-color: #242424;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 0 10px black;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .objetivo h2 {
+           font-size: 32px;
+        margin-bottom: 30px;
+        color: #ff3131
+    }
+
+    .objetivo button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+
+    .objetivo button:hover {
+        background-color: #d92020;
+    }
+</style>
+
 <body>
+
+
     <header>
-        <img src="./img/logo.png" alt="Tanjiro camado" width="100px" height="100px">
+        <img src="img/logo.png" alt="Logo Demon Slayer" class="logo">
         <nav>
-            <ul>
-            <div class="corpo">
-                <h1><span style="color: #FFFFFF;">Por que assistir</span> <span style="color: #FF0000;"> Demon Slayer? </span></h1>
-                <div class="slidebar"><li><span style="color: #FFFFFF;"><u>Jornada</u></span></li>
-                <li><span style="color: #FFFFFF;"><u>Sobre</u></span></li>
-                <li><span style="color: #FFFFFF;"><u>Objetivo</u></span></li>
-            </div>
-</div>
-            </ul>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#galeria">Personagens</a>
+            <a href="#sobremim">Motivação</a>
+            <a href="#objetivo">Objetivo</a>
+            
         </nav>
-
+        <div class="botao"><button onclick="window.location.href='entre.html'">Entre</button> <button onclick="window.location.href='cad.html'">Cadastre-se</button></div>
     </header>
-    <div class="botao">
-     <button onclick="window.location.href='entre.html'" class="btn-entre">Entre</button>
-  <button onclick="window.location.href='cad.html'" class="btn-entre">Cadastre-se</button></div>
-      <div class="intro"> <p><span style="color: #FFFFFF;">Uma introdução para convencer qualquer pessoa a começar a série hoje mesmo.</span></p></div>
-<div class="textoini">
-    <div class="subtop"><h3><span style="font-size: 32px;">Jornada</span></h3><br><br></div>
-   <div class="texintr"> Acompanhe Tanjiro Kamado em uma jornada emocionante para salvar sua irmã Nezuko e caçar demônios perigosos. Demon Slayer combina animação de ponta, batalhas coreografadas e personagens que ficam com você depois do último episódio.</div><br><br>
-<div class="back1">
-    <h3><span style="font-size: 20px;">Animação de Alto Nível</span></h3>
-    <div class="b1"> Produção da Ufotable com cenas de luta cinematográficas e efeitos visuais únicos — cada confronto parece um filme.</div>
-</div> 
-<div class="back2">
-    <h3><span style="font-size: 20px;">História cativante</span></h3>
-    <div class="b2"> Uma narrativa com equilíbrio entre ação, drama e momentos leves, com um objetivo claro: salvar a família e superar a dor.</div>
-</div>
-<div class="back3">
-    <h3><span style="font-size: 20px;">Personagens memoráveis</span></h3>
-    <div class="b3"> Protagonistas que mudam com o tempo e coadjuvantes que roubam a cena — cada um com motivações fortes.</div>
-</div>
-<div class="back4">
-    <h3><span style="font-size: 20px;">Batalhas épicas</span></h3>
-    <div class="b4"> Lutas estratégicas que exploram estilos de Respiração diferentes e coreografias memoráveis.</div>
-</div>
-</div>
 
-<div class="textvi">
-    <div class="subtop2"><h3><span style="font-size: 32px;">Veja o nível da animação!!!</span></h3><br><br></div>
-<div class="video"><video width="600" height="400" controls poster="./img/capa.jpg">
-  <source src="./video/trailer.mp4" type="video/mp4">
-</video></div><br><br><br><br>
-<div class="texvideo"> Com essas cenas impactantes faz com que o anime supere recordes de bilheteria — a franquia alcançou público global e críticas positivas.</div>
-</div>
-<br><br><br><br><br>
-<div class="sobre">
-    <div class="subtop3"><h3><span style="font-size: 32px;">Sobre</span></h3><br><br></div>
-    <div class="textsobre"> A motivação para a criação deste website surgiu do meu carinho por Demon Slayer (Kimetsu no Yaiba), um anime que marcou profundamente minha vida e representa valores essenciais trabalhados na disciplina de Sócio-Emocional, principalmente superação e resiliência. A obra não se destaca apenas pela animação impecável, mas pela capacidade de transmitir emoções genuínas através de seus personagens — cada um com sua dor, sua história e sua forma de lidar com os desafios da vida. <br><br>
-O protagonista Tanjiro Kamado é um grande exemplo de resiliência emocional. Mesmo após perder toda sua família e ver sua irmã Nezuko transformada em oni, ele jamais desistiu. Tanjiro enfrenta batalhas físicas e psicológicas que qualquer pessoa desistiria, mas ele escolhe perseverar, mantendo a empatia, a bondade e o respeito até com seus inimigos. Ele mostra que, independentemente da dificuldade, é possível manter a calma, aprender com a dor e continuar seguindo em frente. <br><br>
-Esse anime me acompanhou em momentos importantes da minha vida, trazendo reflexões e até conforto. Vivi momentos felizes assistindo com minha namorada, criando memórias leves e significativas. Assim como Tanjiro, aprendi que obstáculos podem ser superados com dedicação, apoio emocional e determinação — e isso reforça a importância da resiliência no nosso dia a dia. <br>
-Por isso, o objetivo deste site é compartilhar essa cultura do universo dos animes, mostrando o quanto esse conteúdo pode inspirar, entreter e unir pessoas. Ao acessar a plataforma, o usuário poderá: <br> <br>
-□ Descontrair através de testes interativos e divertidos após o cadastro <br><br>
-□ Sentir pertencimento, percebendo que muitas outras pessoas também gostam de Demon Slayer, graças às dashboards que mostram informações sobre os fãs <br><br>
-□ Refletir sobre emoções e aprender valores como empatia, coragem e superação, que o anime transmite naturalmente <br><br>
-Assistir Demon Slayer vale a pena não apenas pela ação, humor e trilha sonora marcante, mas principalmente pelas lições emocionais que ele entrega. É uma obra capaz de inspirar pessoas a serem melhores, a se fortalecerem diante das dificuldades e a acreditarem que nenhum desafio é impossível quando se tem propósito e coração — assim como Tanjiro Kamado.</div>
-</div>
-<br><br><br><br><br>
+    <!-- SEÇÃO PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <h1>Demon Slayer</h1>
+        <p>Uma história de coragem, superação e batalhas épicas.</p>
+        <button onclick="window.location='#sobre'">Saiba mais</button>
+    </section>
 
-<div class="objetivo">
-    <div class="subtop4"><h3><span style="font-size: 32px;">Objetivo</span></h3><br><br></div>
-    <div class="texobjetivo"> Entre para o universo de Demon Slayer! <br> Descubra qual personagem combina com você, participe de quizzes interativos e veja como outros fãs estão se conectando através das nossas dashboards.
-</div><br><br>
-<div class="botaoob-container">
-            <button onclick="window.location.href='cad.html'" class="botao-principal" class="btn-entre">Quero entrar no universo!</button>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre o Anime</h2>
+        <p>
+            Demon Slayer (Kimetsu no Yaiba) acompanha a jornada de Tanjiro Kamado,
+            um jovem bondoso que vê sua família ser atacada por demônios. Sua irmã, Nezuko,
+            sobrevive, porém transformada em oni. Determinado a encontrar uma cura e proteger
+            pessoas inocentes, Tanjiro se junta aos Caçadores de Demônios, enfrentando inimigos
+            poderosos em batalhas espetaculares.
+        </p>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h2>Personagens</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="img/Tanjiro.jpg" alt="Tanjiro">
+                <h3>Tanjiro Kamado</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/nezuco.jpg" alt="Nezuko">
+                <h3>Nezuko Kamado</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/zenitsu.jpg" alt="Zenitsu">
+                <h3>Zenitsu Agatsuma</h3>
+            </div>
+
         </div>
-</div>
-<br><br><br><br><br>
-<div class="comente"><h3><span style="font-size: 32px;">Comente: </span></h3><br><br></div>
-<textarea class="mensagem" name="mensagem" placeholder="Deixe sua mensagem"></textarea>
-</div>
+    </section>
 
-<div class="imgcomente">
-            <img src="./img/comente.png" alt="Tanjiro camado" width="580px" height="340px">
+    <section id="sobremim" class="motivacao">
+        <h2>Por que criei este site?</h2>
+
+        <div class="mot-container">
+
+
+            <div class="mot-texto">
+                <p>
+                    Criei este site porque Demon Slayer é um anime que me inspira profundamente.
+                    Sua história de perseverança, união e coragem me marcou, e desejo compartilhar
+                    essa mensagem com outras pessoas. Além disso, o site contribui para a ODS 3 —
+                    Saúde e Bem-Estar, ao promover reflexão sobre emoções, superação e resiliência.
+                </p>
+            </div>
+
+
+            <div class="mot-foto">
+                <img src="img/momentos.jpg" alt="Minha foto">
+                <p class="legenda">Assistindo o filme com a minha namorada.</p>
+            </div>
+
+            <div class="mot-ods">
+                <img src="img/ods3.webp" alt="ODS Saúde e Bem-Estar">
+                <p class="legenda">ODS 3: Saúde e Bem-Estar</p>
+            </div>
+
         </div>
+    </section>
+
+    <section id="objetivo" class="objetivo">
+
+    <h2>Objetivo</h2>
+    <div class="obj-container">
+
+        <div class="obj-texto">
+            <p>
+                Entre para o universo de Demon Slayer!
+                Descubra qual personagem combina com você e veja como outros fãs estão
+                se conectando através das nossas dashboards.
+            </p>
+       <button onclick="window.location.href='cad.html'">Quero entrar no universo!</button>
+        </div>
+
+</section>
+
+
     </div>
-</div>
-<br><br><br><br><br>
-<img src="./img/logo.png" alt="Tanjiro camado" width="100px" height="100px">
- <div class="vint"><h3>2025</h3></div>
 
-    
+    <footer>
+        <img src="img/logo.png" alt="Logo Demon Slayer" class="logo1">
+        <div class="ultimo">
+            <p>2025 </p>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
