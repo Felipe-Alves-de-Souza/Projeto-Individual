@@ -38,8 +38,38 @@ function listarComentarios(req, res){
 
 }
 
+function percentualsim(req, res){
+    dashModel.percentualsim()
+    .then(resultado => {
+        var porcentagem_gostou = resultado[0].porcentagem_gostou
+        res.json({resultado});
+    })
+    .catch(erro => {
+        console.error("Erro ao mostrar percentual sim", erro)
+        res.status(500).json(erro);
+    })
+}
+
+function percentualnao(req, res){
+    dashModel.percentualnao()
+    .then(resultado => {
+        var porcentagem_gostou0 = resultado[0].porcentagem_gostou0
+        res.json({resultado});
+    })
+    .catch(erro => {
+        console.error("Erro ao mostrar percentual não", erro)
+        res.status(500).json(erro);
+    })
+}
+
+
+
+
+
 module.exports = {
     publicar, 
     contarVotos,
-    listarComentarios
+    listarComentarios,
+    percentualsim, 
+    percentualnao
 };

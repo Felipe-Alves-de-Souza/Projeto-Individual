@@ -11,3 +11,9 @@ module.exports = router;
 
 router.get("/listarComentarios", dashController.listarComentarios);
 module.exports = router;
+
+router.get("/percentualsim", dashController.percentualsim);
+module.exports = router
+
+router.get("/percentualnao", dashController.percentualnao);
+module.exports = router

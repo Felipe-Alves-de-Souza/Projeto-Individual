@@ -25,9 +25,26 @@ function listarComentarios() {
   return database.executar(instrucaoSql);
 }
 
+    function percentualsim() {
+      const instrucaoSql = `
+      SELECT ROUND(
+      (SUM(CASE WHEN gostou_anime = '1' THEN 1 ELSE 0 END)
+       * 100.0) / COUNT(*),2) AS porcentagem_gostou FROM Pergunta_avaliativa;`;
+      return database.executar(instrucaoSql);
+    }
+
+       function percentualnao() {
+      const instrucaoSql = `
+      SELECT ROUND(
+      (SUM(CASE WHEN gostou_anime = '0' THEN 1 ELSE 0 END)
+       * 100.0) / COUNT(*),2) AS porcentagem_gostou0 FROM Pergunta_avaliativa;`;
+      return database.executar(instrucaoSql);
+    }
 module.exports = {
     publicar, 
     contarVotos,
-    listarComentarios
+    listarComentarios,
+    percentualsim,
+    percentualnao
 
 }
