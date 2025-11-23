@@ -18,8 +18,16 @@ function contarVotos() {
     return database.executar(instrucaoSql);
 }
 
+function listarComentarios() {
+  const instrucaoSql = `
+  SELECT u.Nome, p.comentario FROM Pergunta_avaliativa p
+  JOIN Usuario u ON p.Usuario_idUsuario = u.idUsuario;`;
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
     publicar, 
-    contarVotos
+    contarVotos,
+    listarComentarios
 
 }

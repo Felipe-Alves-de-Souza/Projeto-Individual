@@ -10,10 +10,13 @@
     min-height: 100vh;
     display: flex;
     font-family: 'Inter', sans-serif;
-    background-color: #F1F0F5;
+    background-color: #242424;
 }
 .sidebar {
-    background-color: #c6cbe6;
+    background-image: url(img/slidebar2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
     width: 254px;
     display: flex;
     flex-direction: column;
@@ -50,7 +53,7 @@
 }
 .sidebar .navbar ul li a {
     display: block;
-    color: #251A09;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     padding: 35px;
@@ -59,7 +62,8 @@
 
 
 .sidebar .navbar ul li a.selecionado {
-    background-color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
 }
 
 .sidebar button {
@@ -111,12 +115,27 @@
     
     background-color: #ffffff;
     color: #000000;
+    border-radius: 6px;
     
 }
 
 .imgt {
     margin-left: 240px;
 
+}
+
+select {     
+    padding: 3px 15px;       
+    border-radius: 12px;      
+    border: 2px solid #9482f8; 
+    background-color: #ffffff; 
+    color: #000000;            
+  
+}
+select:hover, select:focus {
+    border-color: #6C802A;   
+    box-shadow: 0 0 10px rgba(108,128,42,0.5); 
+    outline: none;            
 }
 </style>
 <body>
@@ -149,6 +168,7 @@
 <br><br><br>
     <div class="pergunta"><label>1. Você é mais calmo ou explosivo?</label></div>
     <select id="p1">
+         <option value="#">Selecione ⭣</option>
         <option value="1">Calmo</option>
         <option value="2">Equilibrado</option>
         <option value="3">Explosivo</option>
@@ -156,6 +176,7 @@
 
     <div class="pergunta"><label>2. Qual estilo você prefere?</label></div>
     <select id="p2">
+        <option value="#">Selecione ⭣</option>
         <option value="1">Raciocínio / Técnica</option>
         <option value="2">Força / Intensidade</option>
         <option value="3">Velocidade / Agilidade</option>
@@ -163,6 +184,7 @@
 
     <div class="pergunta"><label>3. Como você age em desafios?</label></div>
     <select id="p3">
+         <option value="#">Selecione ⭣</option>
         <option value="1">Analiso primeiro</option>
         <option value="2">Vou direto</option>
         <option value="3">Improviso</option>

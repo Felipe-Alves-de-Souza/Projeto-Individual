@@ -8,3 +8,6 @@ router.post("/publicar/:idUsuario", function (req, res) {
 });
 router.get("/contar-votos", dashController.contarVotos);
 module.exports = router;
+
+router.get("/listarComentarios", dashController.listarComentarios);
+module.exports = router;

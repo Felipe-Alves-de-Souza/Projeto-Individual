@@ -11,10 +11,13 @@
     min-height: 100vh;
     display: flex;
     font-family: 'Inter', sans-serif;
-    background-color: #F1F0F5;
+    background-color: #242424;
 }
 .sidebar {
-    background-color: #c6cbe6;
+     background-image: url(img/slidebar2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
     width: 254px;
     display: flex;
     flex-direction: column;
@@ -51,7 +54,7 @@
 }
 .sidebar .navbar ul li a {
     display: block;
-    color: #251A09;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     padding: 35px;
@@ -60,7 +63,8 @@
 
 
 .sidebar .navbar ul li a.selecionado {
-    background-color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
 }
 
 .sidebar button {
@@ -87,31 +91,64 @@ main {
     justify-content: center;
     align-items: center;
 }
-.dashboard-container {
+.dashboards-container {
+  display: flex;
     width: 100%;
-    background-color: #fff;
+    justify-content: center;
+    flex: 1;
     padding: 13px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     align-items: center;
 }
+.contagem {
+  color: #ffffff;
+ margin-left: 3px;
 
+}
 .grafico {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 400px;
-    margin-left: 300px;
-    margin-top: 32%;
+  justify-content: center; 
+  margin-top: 100px;
+  margin-top: 50px; 
 }
+#comentarios {
+    width: 300px;         
+    background-color: #2c2c2c;  
+    color: #ffffff;        
+    padding: 20px;
+    border-radius: 12px;    
+    max-height: 600px;     
+    overflow-y: auto;      
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;           
+}
+.comentario {
+    background-color: #3a3a3a;  
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.comentario p {
+    margin: 0 0 5px 0;
+}
+
+.comentario span {
+    font-size: 12px;
+    color: #b0b0b0;  
+}
+
+
+
 
 
 </style>
 <body>
 
     
-</body>
+
 <nav class="sidebar">
     <div>
 
@@ -131,22 +168,19 @@ main {
     </div>
     <button onclick="window.location.href='index.html'" onclick="sair()">Sair</button>
 </nav>
-<div class="dashboards-container">
-   <div style="max-width: 700px;">
-    <div class="grafico"><canvas id="myChart1"></canvas></div>
-    </div>
-    </div>
-    <div class="dashboards-container">
-    <div style="max-width: 700px;">
-      <div class="grafico">
-    
-        <canvas id="graficoVotos" width="400" height="400"></canvas>
-      </div>
+<div class="dashboards-container" style="display: flex; width: 100%; align-items: flex-start;">
+ 
+  <div class="grafico-container" style="margin: 0 auto; text-align: center; margin-top: 250px; margin-right: 3px;">
+    <canvas id="graficoVotos" width="250" height="250"></canvas>
+    <div class="contagem">
       <p>Sim: <span id="contagem-sim">0</span></p>
       <p>Não: <span id="contagem-nao">0</span></p>
     </div>
   </div>
-</html>
+
+ 
+  <div id="comentarios" style="margin-left: auto;"></div>
+</div>
 <script src="../js/logado.js"></script>
 <script>
 let graficoVotosChart;
@@ -200,10 +234,38 @@ function atualizarGraficoVotos() {
     });
 }
 
+function carregarComentarios() {
+    fetch("/dash/listarComentarios")
+        .then(resposta => resposta.json())
+        .then(lista => {
+           var div = document.getElementById("comentarios");
+            div.innerHTML = "";
+
+            for (var i = 0; i < lista.length; i++) {
+                var comentario = lista[i].comentario;
+                var nome = lista[i].Nome;
+
+                div.innerHTML += `
+                    <div class="comentario">
+                        <p>${comentario}</p>
+                        <span>- ${nome}</span>
+                    </div>
+                `;
+            }
+        })
+        .catch(erro => {
+            console.log("Erro ao carregar comentários:", erro);
+        });
+}
+
+
 
 window.onload = function () {
   atualizarGraficoVotos();
+  carregarComentarios();
 
   setInterval(atualizarGraficoVotos, 5000);
 };
 </script>
+</body>
+</html>

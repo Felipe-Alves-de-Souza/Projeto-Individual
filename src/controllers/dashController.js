@@ -26,8 +26,20 @@ function contarVotos(req, res) {
         });
 }
 
+function listarComentarios(req, res){
+    dashModel.listarComentarios()
+    .then(resultado => {
+        res.json(resultado);
+    })
+    .catch(erro => {
+            console.error("Erro ao listar comentario:", erro);
+            res.status(500).json(erro);
+        });
+
+}
 
 module.exports = {
     publicar, 
-    contarVotos
+    contarVotos,
+    listarComentarios
 };

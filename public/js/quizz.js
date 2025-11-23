@@ -1,6 +1,7 @@
 var perguntas = []; 
 let pontuacao = 0;    
 
+
 var hashiras = [
     "Giyu Tomioka (Água)",
     "Kyojuro Rengoku (Chama)",
@@ -14,7 +15,10 @@ var descricoes = [
 ];
 
 function calcularHashira() {
-
+if(p1.value == '#' || p2.value == '#' || p3.value == '#'){
+    alert('Verique se todas as opções estão selecionadas!')
+}
+else{
     pontuacao = 0;
     perguntas.length = 0;
 
@@ -43,4 +47,5 @@ function calcularHashira() {
     
     resultado.innerHTML = "Você combina com: " + hashiras[indice];
     descricao.innerHTML = `${descricoes[indice]} `;
+}
 }
