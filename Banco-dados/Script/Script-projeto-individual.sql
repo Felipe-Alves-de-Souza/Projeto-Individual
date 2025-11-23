@@ -17,3 +17,5 @@ CREATE TABLE Pergunta_avaliativa (
     FOREIGN KEY (Usuario_idUsuario) REFERENCES Usuario(idUsuario)
 );
 
+ALTER TABLE Pergunta_avaliativa
+ADD CONSTRAINT unique_usuario_unico UNIQUE (Usuario_idUsuario);
