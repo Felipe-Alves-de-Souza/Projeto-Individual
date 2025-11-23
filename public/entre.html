@@ -17,7 +17,7 @@
   body {
     height: 100%;
     margin: 0;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-family: Inter;
     background-image: url(img/fundo2.png);
     display: flex;
     align-items: center;
@@ -75,14 +75,6 @@
     cursor: pointer;
   }
 
-  button.secondary {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 8px 12px;
-  }
-
   .error {
     color: #d92d20;
     font-size: 13px;
@@ -90,11 +82,6 @@
     display: none;
   }
 
-  @media (max-width:480px) {
-    .card {
-      padding: 20px;
-    }
-  }
 </style>
 </head>
 
@@ -103,17 +90,15 @@
     <h1>Entrar</h1>
     <p class="lead">Entre com seu email e senha para acessar a área restrita.</p>
 
-    <form id="loginForm" onsubmit="return false;">
       <div>
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="seu@exemplo.com" required/>
+        <input id="email" type="email" placeholder="seu@exemplo.com">
       </div>
 
       <div style="margin-top:12px;">
         <label for="password">Senha</label>
         <div class="row">
-          <input id="senha" type="password" placeholder="mínimo 6 caracteres" required />
-          <button type="button" id="togglePwd" class="secondary">Mostrar</button>
+          <input id="senha" type="password" placeholder="mínimo 6 caracteres" >
         </div>
       </div>
 
@@ -130,7 +115,7 @@
 
   <script>
     function loginBtn() {
-      //aguardar();
+      
 
       var emailVar = email.value;
       var senhaVar = senha.value;
