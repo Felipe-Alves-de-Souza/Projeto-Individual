@@ -1,0 +1,133 @@
+ body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    background-color: #242424;
+}
+.sidebar {
+    background-image: url('../public/img/slidebar2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    width: 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 52px 52px 0 52px;
+}
+.sidebar a:focus {
+    outline: none;
+}
+
+.perfil a {
+    background-color: #6C802A;
+    border-radius: 100px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 6px 48px;
+    color: #fff;
+    margin-top: 16px;
+    transition: .2s ease-in-out;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar .navbar {
+    width: 100%;
+    margin-top: 44px;
+}
+.sidebar .navbar ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 35px;
+    transition: .2s ease-in-out;
+}
+
+
+.sidebar .navbar ul li a.selecionado {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+.sidebar button {
+    background-color: #CE1413;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 48px;
+    font-size: 17px;
+    border: none;
+    font-weight: 600;
+    margin-bottom: 61px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.sidebar button:hover {
+    background-color: #ad1010;
+
+}
+.box {
+   background-image: url('../public/img/fundo4.webp');
+   background-size: cover;
+   background-position: center;
+   color: #ffffff;
+   border-radius: 16px;
+   margin-top: 60px;
+   font-weight: bold;
+   margin-left: 200px ;
+    width: 45%;
+    height: 40%;
+    flex-direction: center;
+    justify-content: center;
+    
+}
+
+.pergunta {
+    background-color: #9482f8;
+    color: #000000;
+    width:300px;
+    border-radius: 13px;
+}
+
+.pergunta1 {
+     background-color: #c6cbe6;
+     color: #000000;
+    width:550px;
+    border-radius: 10px;
+}
+
+.minhaDiv {
+    
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    
+}
+
+.imgt {
+    margin-left: 240px;
+
+}
+
+select {     
+    padding: 3px 15px;       
+    border-radius: 12px;      
+    border: 2px solid #9482f8; 
+    background-color: #ffffff; 
+    color: #000000;            
+  
+}
+select:hover, select:focus {
+    border-color: #6C802A;   
+    box-shadow: 0 0 10px rgba(108,128,42,0.5); 
+    outline: none;            
+}

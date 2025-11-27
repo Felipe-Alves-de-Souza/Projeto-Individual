@@ -1,0 +1,238 @@
+   body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #141414;
+        color: white;
+    }
+
+
+    header {
+        background-color: #0a0a0a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .botao button {
+        margin-top: 8px;
+        padding: 8px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+    .botao button:hover {
+        background-color: #d92020;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .logo1 {
+        display: flex;
+        height: 60px;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    nav a {
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+
+    }
+
+    nav a:hover {
+        color: #ff3131;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 120px 20px;
+        background-image: url('../public/img/capa.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        text-shadow: 3px 3px 5px #000;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+
+    .hero button:hover {
+        background-color: #d92020;
+    }
+
+
+    .sobre {
+        padding: 50px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .galeria {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        width: 220px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #000;
+    }
+
+    .card img {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        margin-top: 10px;
+    }
+
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        background-color: #0a0a0a;
+    }
+
+    .motivacao {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #1b1b1b;
+        margin-top: 40px;
+    }
+
+    .motivacao h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        color: #ff3131;
+    }
+
+    .mot-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .mot-texto {
+        width: 350px;
+        background-color: #242424;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 0 10px black;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: left;
+    }
+
+    .mot-foto,
+    .mot-ods {
+        width: 150px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .mot-foto img,
+    .mot-ods img {
+        width: 150px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+
+    .legenda {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #ccc;
+    }
+
+    .ultimo {
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .objetivo {
+        padding: 50px 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .obj-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .obj-texto {
+         width: 500px;
+        background-color: #242424;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 0 10px black;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .objetivo h2 {
+           font-size: 32px;
+        margin-bottom: 30px;
+        color: #ff3131
+    }
+
+    .objetivo button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ff3131;
+        color: white;
+    }
+
+    .objetivo button:hover {
+        background-color: #d92020;
+    }
