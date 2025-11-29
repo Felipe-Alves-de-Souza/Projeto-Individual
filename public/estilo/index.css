@@ -55,7 +55,7 @@
     .hero {
         text-align: center;
         padding: 120px 20px;
-        background-image: url('../public/img/capa.jpg');
+        background-image: url('../img/capa.jpg');;
         background-size: cover;
         background-position: center;
     }

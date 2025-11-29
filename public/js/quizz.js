@@ -14,6 +14,7 @@ var descricoes = [
     "Você é rápido, imprevisível e estiloso — igual ao Hashira do Som."
 ];
 
+
 function calcularHashira() {
 if(p1.value == '#' || p2.value == '#' || p3.value == '#'){
     alert('Verique se todas as opções estão selecionadas!')

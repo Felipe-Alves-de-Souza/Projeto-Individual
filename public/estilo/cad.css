@@ -1,6 +1,6 @@
  body {
       font-family: 'Poppins';
-      background-image: url('../public/img/fundo2.png');
+      background-image: url('../img/fundo2.png');
       width: 100%;
       display: flex;
       justify-content: center;

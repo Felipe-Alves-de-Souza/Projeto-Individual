@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./js/sessao.js"></script>
-   <link rel="stylesheet" href="../estilo/cad.css">
+   <link rel="stylesheet" href="./estilo/cad.css">
   <title>Cadastro</title>
  
 </head>
@@ -57,7 +57,8 @@
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      !emailVar.includes('@')
+      !emailVar.includes('@')  ||
+      !emailVar.includes('.')
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =

@@ -5,7 +5,7 @@
       background-color: #242424;
   }
   .sidebar {
-      background-image: url('../public/img/slidebar2.jpg');
+      background-image: url('../img/slidebar2.jpg');
       background-size: cover;
       background-position: center;
       border-radius: 12px;
